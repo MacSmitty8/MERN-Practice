@@ -28,10 +28,7 @@ const setGoals = asyncHandler(async(req, res) =>{
     res.status(200).json(goal)
 });
 
-//@des  get goals
-//@routw   Get /api/goals
 
-//@access Private
 //@des  get goals
 //@routw   Get /api/goals
 
@@ -52,6 +49,10 @@ const updateGoals = asyncHandler(async(req, res) =>{
     res.status(200).json(updatedGoal);
 });
 
+//@des  get goals
+//@routw   Get /api/goals
+
+//@access Private
 const deleteGoals = asyncHandler(async(req, res) =>{
     //find the id
     const goal = await Goal.findByIdAndDelete(req.params.id)

@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 //user resource
 connectDB()
-//....
+//.... use goalRoutes to handle any endpoints that end with /api/hoals
 app.use('/api/goals', require('./routes/goalRoutes'))
 
 app.listen(port, () =>{
