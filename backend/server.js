@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}))
 connectDB()
 //.... use goalRoutes to handle any endpoints that end with /api/hoals
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 app.listen(port, () =>{
     console.log(`server started on ${port}`);
